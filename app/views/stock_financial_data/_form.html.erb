@@ -1,0 +1,85 @@
+<%= form_for(@stock_financial_datum) do |f| %>
+  <% if @stock_financial_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stock_financial_datum.errors.count, "error") %> prohibited this stock_financial_datum from being saved:</h2>
+
+      <ul>
+      <% @stock_financial_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :stock_id %><br />
+    <%= f.text_field :stock_id %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.date_select :day %>
+  </div>
+  <div class="field">
+    <%= f.label :zsz %><br />
+    <%= f.text_field :zsz %>
+  </div>
+  <div class="field">
+    <%= f.label :ltsz %><br />
+    <%= f.text_field :ltsz %>
+  </div>
+  <div class="field">
+    <%= f.label :ltgb %><br />
+    <%= f.text_field :ltgb %>
+  </div>
+  <div class="field">
+    <%= f.label :zgb %><br />
+    <%= f.text_field :zgb %>
+  </div>
+  <div class="field">
+    <%= f.label :zysr_ttm %><br />
+    <%= f.text_field :zysr_ttm %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :pe_ttm %><br />
+    <%= f.text_field :pe_ttm %>
+  </div>
+  <div class="field">
+    <%= f.label :pe_lyr %><br />
+    <%= f.text_field :pe_lyr %>
+  </div>
+  <div class="field">
+    <%= f.label :pe_d %><br />
+    <%= f.text_field :pe_d %>
+  </div>
+  <div class="field">
+    <%= f.label :mrq %><br />
+    <%= f.text_field :mrq %>
+  </div>
+  <div class="field">
+    <%= f.label :mrr %><br />
+    <%= f.text_field :mrr %>
+  </div>
+  <div class="field">
+    <%= f.label :profit_ttm %><br />
+    <%= f.text_field :profit_ttm %>
+  </div>
+  <div class="field">
+    <%= f.label :mgjzc %><br />
+    <%= f.text_field :mgjzc %>
+  </div>
+  <div class="field">
+    <%= f.label :jzcsyl_ttm %><br />
+    <%= f.text_field :jzcsyl_ttm %>
+  </div>
+  <div class="field">
+    <%= f.label :mll_ttm %><br />
+    <%= f.text_field :mll_ttm %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

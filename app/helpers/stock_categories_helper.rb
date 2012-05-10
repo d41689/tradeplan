@@ -1,0 +1,2 @@
+module StockCategoriesHelper
+end

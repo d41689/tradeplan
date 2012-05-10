@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  stock_id: 1
+  day_data: 
+  day_number: 1
+  week_data: 
+  week_number: 1
+  month_data: 
+  month_number: 1
+  hour_data: 
+  hour_number: 1
+
+two:
+  stock_id: 1
+  day_data: 
+  day_number: 1
+  week_data: 
+  week_number: 1
+  month_data: 
+  month_number: 1
+  hour_data: 
+  hour_number: 1

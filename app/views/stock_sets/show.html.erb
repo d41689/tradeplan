@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Stock category:</b>
+  <%= @stock_set.stock_category_id %>
+</p>
+
+<p>
+  <b>Stock:</b>
+  <%= @stock_set.stock_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_stock_set_path(@stock_set) %> |
+<%= link_to 'Back', stock_sets_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  share: 1
+  profit: 9.99
+  price: 9.99
+  day: 2012-03-16
+
+two:
+  share: 1
+  profit: 9.99
+  price: 9.99
+  day: 2012-03-16

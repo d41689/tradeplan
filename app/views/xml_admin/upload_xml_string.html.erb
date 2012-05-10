@@ -1,0 +1,15 @@
+<h1>XmlAdmin#upload_xml_string</h1>
+<p>Find me in app/views/xml_admin/upload_xml_string.html.erb</p>
+<%= notice %>
+<%= form_tag :action => "create_from_form" do -%>
+    <p>
+        <%= label_tag 'xml_type' %>
+        <%= select_tag 'xml_type', options_for_select(XML_STRING_TYPE) %><br/>
+    </p>
+
+    <p>
+        <%= text_area_tag 'xml', nil, :rows => 20, :cols => 100 %><br/>
+    </p>
+
+    <%= submit_tag "submit" %>
+<% end %>

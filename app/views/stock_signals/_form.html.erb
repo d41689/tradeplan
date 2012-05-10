@@ -1,0 +1,73 @@
+<%= form_for(@stock_signal) do |f| %>
+  <% if @stock_signal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stock_signal.errors.count, "error") %> prohibited this stock_signal from being saved:</h2>
+
+      <ul>
+      <% @stock_signal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code %><br />
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :signal_type %><br />
+    <%= f.text_field :signal_type %>
+  </div>
+  <div class="field">
+    <%= f.label :operation %><br />
+    <%= f.text_field :operation %>
+  </div>
+  <div class="field">
+    <%= f.label :buy_price %><br />
+    <%= f.text_field :buy_price %>
+  </div>
+  <div class="field">
+    <%= f.label :initial_stop_price %><br />
+    <%= f.text_field :initial_stop_price %>
+  </div>
+  <div class="field">
+    <%= f.label :stop_price %><br />
+    <%= f.text_field :stop_price %>
+  </div>
+  <div class="field">
+    <%= f.label :his_performance %><br />
+    <%= f.text_field :his_performance %>
+  </div>
+  <div class="field">
+    <%= f.label :long_trend %><br />
+    <%= f.text_field :long_trend %>
+  </div>
+  <div class="field">
+    <%= f.label :mid_trend %><br />
+    <%= f.text_field :mid_trend %>
+  </div>
+  <div class="field">
+    <%= f.label :short_trend %><br />
+    <%= f.text_field :short_trend %>
+  </div>
+  <div class="field">
+    <%= f.label :mkt_long_trend %><br />
+    <%= f.text_field :mkt_long_trend %>
+  </div>
+  <div class="field">
+    <%= f.label :mkt_mid_trend %><br />
+    <%= f.text_field :mkt_mid_trend %>
+  </div>
+  <div class="field">
+    <%= f.label :buy_date %><br />
+    <%= f.date_select :buy_date %>
+  </div>
+  <div class="field">
+    <%= f.label :sell_date %><br />
+    <%= f.date_select :sell_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

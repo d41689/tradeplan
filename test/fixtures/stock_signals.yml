@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  signal_type: 1
+  operation: 1
+  buy_price: 9.99
+  initial_stop_price: 9.99
+  stop_price: 9.99
+  his_performance: 9.99
+  long_trend: 1
+  mid_trend: 1
+  short_trend: 1
+  mkt_long_trend: 1
+  mkt_mid_trend: 1
+  buy_date: 2011-04-21
+  sell_date: 2011-04-21
+
+two:
+  code: MyString
+  signal_type: 1
+  operation: 1
+  buy_price: 9.99
+  initial_stop_price: 9.99
+  stop_price: 9.99
+  his_performance: 9.99
+  long_trend: 1
+  mid_trend: 1
+  short_trend: 1
+  mkt_long_trend: 1
+  mkt_mid_trend: 1
+  buy_date: 2011-04-21
+  sell_date: 2011-04-21

@@ -1,0 +1,55 @@
+<h1>Listing stock_financial_data</h1>
+
+<table>
+  <tr>
+    <th>Stock</th>
+    <th>Day</th>
+    <th>Zsz</th>
+    <th>Ltsz</th>
+    <th>Ltgb</th>
+    <th>Zgb</th>
+    <th>Zysr ttm</th>
+    <th>Price</th>
+    <th>Pe ttm</th>
+    <th>Pe lyr</th>
+    <th>Pe d</th>
+    <th>Mrq</th>
+    <th>Mrr</th>
+    <th>Profit ttm</th>
+    <th>Mgjzc</th>
+    <th>Jzcsyl ttm</th>
+    <th>Mll ttm</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stock_financial_data.each do |stock_financial_datum| %>
+  <tr>
+    <td><%= stock_financial_datum.stock_id %></td>
+    <td><%= stock_financial_datum.day %></td>
+    <td><%= stock_financial_datum.zsz %></td>
+    <td><%= stock_financial_datum.ltsz %></td>
+    <td><%= stock_financial_datum.ltgb %></td>
+    <td><%= stock_financial_datum.zgb %></td>
+    <td><%= stock_financial_datum.zysr_ttm %></td>
+    <td><%= stock_financial_datum.price %></td>
+    <td><%= stock_financial_datum.pe_ttm %></td>
+    <td><%= stock_financial_datum.pe_lyr %></td>
+    <td><%= stock_financial_datum.pe_d %></td>
+    <td><%= stock_financial_datum.mrq %></td>
+    <td><%= stock_financial_datum.mrr %></td>
+    <td><%= stock_financial_datum.profit_ttm %></td>
+    <td><%= stock_financial_datum.mgjzc %></td>
+    <td><%= stock_financial_datum.jzcsyl_ttm %></td>
+    <td><%= stock_financial_datum.mll_ttm %></td>
+    <td><%= link_to 'Show', stock_financial_datum %></td>
+    <td><%= link_to 'Edit', edit_stock_financial_datum_path(stock_financial_datum) %></td>
+    <td><%= link_to 'Destroy', stock_financial_datum, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stock financial datum', new_stock_financial_datum_path %>

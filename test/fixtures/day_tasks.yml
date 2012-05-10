@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  day: 2012-04-06
+  windin: false
+  csindex: false
+  cninfo: false
+
+two:
+  day: 2012-04-06
+  windin: false
+  csindex: false
+  cninfo: false

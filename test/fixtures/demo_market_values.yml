@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  day: 2011-04-22
+  total: 9.99
+  mkt_index: 9.99
+
+two:
+  day: 2011-04-22
+  total: 9.99
+  mkt_index: 9.99

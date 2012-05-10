@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  invite_num: 1
+  is_first_visit_today: false
+  networkUid: MyString
+  network: 1
+  sex: false
+  experience: 1
+  first_name: MyString
+  full_name: MyString
+  imageUrl: MyString
+  largeImageUrl: MyString
+  hasProfileBoxImage: false
+  profileUrl: 1
+  appInstalled: false
+  credit: 1
+
+two:
+  invite_num: 1
+  is_first_visit_today: false
+  networkUid: MyString
+  network: 1
+  sex: false
+  experience: 1
+  first_name: MyString
+  full_name: MyString
+  imageUrl: MyString
+  largeImageUrl: MyString
+  hasProfileBoxImage: false
+  profileUrl: 1
+  appInstalled: false
+  credit: 1

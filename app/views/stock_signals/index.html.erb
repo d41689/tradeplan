@@ -1,0 +1,53 @@
+<h1>Listing stock_signals</h1>
+
+<table>
+<thead>  
+<tr>
+    <th>Code</th>
+    <th>Signal type</th>
+    <th>Operation</th>
+    <th>Buy price</th>
+    <th>Initial stop price</th>
+    <th>Stop price</th>
+    <th>His performance</th>
+    <th>Long trend</th>
+    <th>Mid trend</th>
+    <th>Short trend</th>
+    <th>Mkt long trend</th>
+    <th>Mkt mid trend</th>
+    <th>Buy date</th>
+    <th>Sell date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+<% @stock_signals.each do |stock_signal| %>
+  <tr>
+    <td><%= stock_signal.code %></td>
+    <td><%= stock_signal.signal_type %></td>
+    <td><%= stock_signal.operation %></td>
+    <td><%= stock_signal.buy_price %></td>
+    <td><%= stock_signal.initial_stop_price %></td>
+    <td><%= stock_signal.stop_price %></td>
+    <td><%= stock_signal.his_performance %></td>
+    <td><%= stock_signal.long_trend %></td>
+    <td><%= stock_signal.mid_trend %></td>
+    <td><%= stock_signal.short_trend %></td>
+    <td><%= stock_signal.mkt_long_trend %></td>
+    <td><%= stock_signal.mkt_mid_trend %></td>
+    <td><%= stock_signal.buy_date %></td>
+    <td><%= stock_signal.sell_date %></td>
+    <td><%= link_to 'Show', stock_signal %></td>
+    <td><%= link_to 'Edit', edit_stock_signal_path(stock_signal) %></td>
+    <td><%= link_to 'Destroy', stock_signal, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+</tbody>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stock signal', new_stock_signal_path %>
+<p><%= will_paginate @stock_signals %></p>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  market: 
+  code: MyString
+  name: MyString
+
+two:
+  market: 
+  code: MyString
+  name: MyString

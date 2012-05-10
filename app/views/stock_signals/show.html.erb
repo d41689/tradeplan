@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code:</b>
+  <%= @stock_signal.code %>
+</p>
+
+<p>
+  <b>Signal type:</b>
+  <%= @stock_signal.signal_type %>
+</p>
+
+<p>
+  <b>Operation:</b>
+  <%= @stock_signal.operation %>
+</p>
+
+<p>
+  <b>Buy price:</b>
+  <%= @stock_signal.buy_price %>
+</p>
+
+<p>
+  <b>Initial stop price:</b>
+  <%= @stock_signal.initial_stop_price %>
+</p>
+
+<p>
+  <b>Stop price:</b>
+  <%= @stock_signal.stop_price %>
+</p>
+
+<p>
+  <b>His performance:</b>
+  <%= @stock_signal.his_performance %>
+</p>
+
+<p>
+  <b>Long trend:</b>
+  <%= @stock_signal.long_trend %>
+</p>
+
+<p>
+  <b>Mid trend:</b>
+  <%= @stock_signal.mid_trend %>
+</p>
+
+<p>
+  <b>Short trend:</b>
+  <%= @stock_signal.short_trend %>
+</p>
+
+<p>
+  <b>Mkt long trend:</b>
+  <%= @stock_signal.mkt_long_trend %>
+</p>
+
+<p>
+  <b>Mkt mid trend:</b>
+  <%= @stock_signal.mkt_mid_trend %>
+</p>
+
+<p>
+  <b>Buy date:</b>
+  <%= @stock_signal.buy_date %>
+</p>
+
+<p>
+  <b>Sell date:</b>
+  <%= @stock_signal.sell_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_stock_signal_path(@stock_signal) %> |
+<%= link_to 'Back', stock_signals_path %>

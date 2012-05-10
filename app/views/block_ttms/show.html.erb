@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Stock category:</b>
+  <%= @block_ttm.stock_category_id %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @block_ttm.day %>
+</p>
+
+<p>
+  <b>Ttm:</b>
+  <%= @block_ttm.ttm %>
+</p>
+
+
+<%= link_to 'Edit', edit_block_ttm_path(@block_ttm) %> |
+<%= link_to 'Back', block_ttms_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@block_ttm) do |f| %>
+  <% if @block_ttm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@block_ttm.errors.count, "error") %> prohibited this block_ttm from being saved:</h2>
+
+      <ul>
+      <% @block_ttm.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :stock_category_id %><br />
+    <%= f.text_field :stock_category_id %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.date_select :day %>
+  </div>
+  <div class="field">
+    <%= f.label :ttm %><br />
+    <%= f.text_field :ttm %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

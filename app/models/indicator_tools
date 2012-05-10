@@ -1,0 +1,5 @@
+module IndicatorTools
+  def ma
+
+  end
+end

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  trade_date: 2011-04-22
+  code: MyString
+  operation: MyString
+  price: 1.5
+  quantity: 1
+  profit: 9.99
+  profit_rate: 9.99
+
+two:
+  trade_date: 2011-04-22
+  code: MyString
+  operation: MyString
+  price: 1.5
+  quantity: 1
+  profit: 9.99
+  profit_rate: 9.99

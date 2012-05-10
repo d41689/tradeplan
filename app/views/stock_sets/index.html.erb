@@ -1,0 +1,25 @@
+<h1>Listing stock_sets</h1>
+
+<table>
+  <tr>
+    <th>Stock category</th>
+    <th>Stock</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stock_sets.each do |stock_set| %>
+  <tr>
+    <td><%= stock_set.stock_category_id %></td>
+    <td><%= stock_set.stock_id %></td>
+    <td><%= link_to 'Show', stock_set %></td>
+    <td><%= link_to 'Edit', edit_stock_set_path(stock_set) %></td>
+    <td><%= link_to 'Destroy', stock_set, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stock set', new_stock_set_path %>

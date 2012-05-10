@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  stock_category_id: 1
+  day: 2012-03-16
+  ttm: 9.99
+
+two:
+  stock_category_id: 1
+  day: 2012-03-16
+  ttm: 9.99

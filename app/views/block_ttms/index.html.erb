@@ -1,0 +1,31 @@
+<h1>Listing block_ttms</h1>
+
+<table>
+  <tr>
+    <th>Stock category ID</th>
+    <th>Stock category name</th>
+    <th>Day</th>
+    <th>Ttm</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @block_ttms.each do |block_ttm| %>
+  <tr>
+    <td><%= block_ttm.stock_category_id %></td>
+    <td><%= StockCategory.find(block_ttm.stock_category_id).name %></td>
+    <td><%= block_ttm.day %></td>
+    <td><%= block_ttm.ttm %></td>
+    <td><%= link_to 'Show', block_ttm %></td>
+    <td><%= link_to 'Edit', edit_block_ttm_path(block_ttm) %></td>
+    <td><%= link_to 'Destroy', block_ttm, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Histroy', histroy_block_ttm_path(block_ttm.stock_category_id) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Block ttm', new_block_ttm_path %>
