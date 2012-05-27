@@ -31,10 +31,10 @@ end
 
 def get_current_date
   unless $current_day
-    codes = ['600036','601988','601998','601398','601628','600519']
+    codes = ['600036', '601988', '601998', '601398', '601628', '600519']
     client = WindinClient.new
     i = 0
-    until client.fetch_data(1,codes[i])
+    until client.fetch_data(1, codes[i])
       puts "fetch data from windin failed.#{codes[i]}"
       i += 1
       i = 0 if codes.size == i
@@ -48,7 +48,7 @@ end
 
 #=begin 临时屏蔽
 #process windin
-scheduler.every '2m' do
+scheduler.every '1m' do
   puts 'Processing windin data...'
   #day_task = DayTask.find_by_day(Date.today)
   t = Thread.new {
@@ -71,12 +71,12 @@ scheduler.every '2m' do
       end
     end
   }
-  puts t,t.class,t.value
+  puts t, t.class, t.value
   if t.value
     puts 'windin data not get yet...'
     begin
       WindinClient.new.fill_stock_financial_data_table
-      BlockTtm.prepare
+      WindinClient.prepare
     rescue Exception => e
       #process failed.
       puts e.message
@@ -88,7 +88,7 @@ scheduler.every '2m' do
             puts 'error...1'
           elsif day_task.windin == PROCESSING
             day_task.windin = NOT_PROCESSED
-            day_task.update_attribute(:windin,NOT_PROCESSED)
+            day_task.update_attribute(:windin, NOT_PROCESSED)
           else
             puts 'error...2'
           end
@@ -98,7 +98,7 @@ scheduler.every '2m' do
   end
 end
 #证监会
-scheduler.every '2m' do
+scheduler.every '15m' do
   puts 'Processing zhengjianhui data...'
 
   t = Thread.new {
@@ -116,12 +116,12 @@ scheduler.every '2m' do
         false
       else
         day_task.csindex = PROCESSING
-        day_task.update_attribute(:csindex,PROCESSING)
+        day_task.update_attribute(:csindex, PROCESSING)
         true
       end
     }
   }
-  puts t,t.class,t.value
+  puts t, t.class, t.value
   if t.value
     puts 'zhengjianhui data not get yet...'
     begin
@@ -138,7 +138,7 @@ scheduler.every '2m' do
             puts 'error...1'
           elsif day_task.csindex == PROCESSING
             day_task.csindex = NOT_PROCESSED
-            day_task.update_attribute(:csindex,NOT_PROCESSED)
+            day_task.update_attribute(:csindex, NOT_PROCESSED)
           else
             puts 'error...2'
           end
@@ -148,7 +148,7 @@ scheduler.every '2m' do
   end
 end
 #巨潮
-scheduler.every '2m' do
+scheduler.every '15m' do
   puts 'Processing juchao data...'
 
   t = Thread.new {
@@ -166,12 +166,12 @@ scheduler.every '2m' do
         false
       else
         day_task.cninfo = PROCESSING
-        day_task.update_attribute(:cninfo,PROCESSING)
+        day_task.update_attribute(:cninfo, PROCESSING)
         true
       end
     }
   }
-  puts t,t.class,t.value
+  puts t, t.class, t.value
   if t.value
     puts 'cninfo data not get yet...'
     begin
@@ -188,7 +188,7 @@ scheduler.every '2m' do
             puts 'error...1'
           elsif day_task.cninfo == PROCESSING
             day_task.cninfo = NOT_PROCESSED
-            day_task.update_attribute(:cninfo,NOT_PROCESSED)
+            day_task.update_attribute(:cninfo, NOT_PROCESSED)
           else
             puts 'error...2'
           end

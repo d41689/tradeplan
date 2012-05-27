@@ -2,11 +2,14 @@ class StockFinancialDataController < ApplicationController
   # GET /stock_financial_data
   # GET /stock_financial_data.xml
   def index
-    @stock_financial_data = StockFinancialDatum.all
+    #@stock_financial_data = StockFinancialDatum.all
+    @stock_financial_datum = StockFinancialDatum.new
+    last_day = StockFinancialDatum.last.day
+    @stock_financial_data = StockFinancialDatum.where("day = '#{last_day}' AND pe_ttm BETWEEN 0 AND 200 and mrq BETWEEN 0 AND 5 and mgjzc > 0 and jzcsyl_ttm > 10 AND mll_ttm > 20").order("pe_ttm asc,mrq asc,jzcsyl_ttm desc,mll_ttm desc").paginate :page => params[:page], :order => 'day desc', :per_page => 20
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @stock_financial_data }
+      format.xml { render :xml => @stock_financial_data }
     end
   end
 
@@ -17,7 +20,7 @@ class StockFinancialDataController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @stock_financial_datum }
+      format.xml { render :xml => @stock_financial_datum }
     end
   end
 
@@ -28,7 +31,7 @@ class StockFinancialDataController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @stock_financial_datum }
+      format.xml { render :xml => @stock_financial_datum }
     end
   end
 
@@ -45,10 +48,10 @@ class StockFinancialDataController < ApplicationController
     respond_to do |format|
       if @stock_financial_datum.save
         format.html { redirect_to(@stock_financial_datum, :notice => 'Stock financial datum was successfully created.') }
-        format.xml  { render :xml => @stock_financial_datum, :status => :created, :location => @stock_financial_datum }
+        format.xml { render :xml => @stock_financial_datum, :status => :created, :location => @stock_financial_datum }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @stock_financial_datum.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @stock_financial_datum.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -61,10 +64,10 @@ class StockFinancialDataController < ApplicationController
     respond_to do |format|
       if @stock_financial_datum.update_attributes(params[:stock_financial_datum])
         format.html { redirect_to(@stock_financial_datum, :notice => 'Stock financial datum was successfully updated.') }
-        format.xml  { head :ok }
+        format.xml { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @stock_financial_datum.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @stock_financial_datum.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -77,7 +80,7 @@ class StockFinancialDataController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(stock_financial_data_url) }
-      format.xml  { head :ok }
+      format.xml { head :ok }
     end
   end
 end

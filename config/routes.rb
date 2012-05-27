@@ -4,8 +4,10 @@ TradePlan::Application.routes.draw do
   resources :block_ttms do
     member do
       get 'histroy'
-      get 'null_data'
-      get 'graph_code'
+      get 'market_indicator'
+      get 'show_sttm'
+      get 'show_wmrq'
+      get 'show_smrq'
     end
   end
 
